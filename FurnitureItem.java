@@ -1,25 +1,31 @@
 public class FurnitureItem {
-    //colour , Grde of quality, types of furnitures are attributes
-    String Colour;
-    int Grade;
-    String Furnitures;
-    String Furnituretype="Outdoor";
-    int furnitureprice;
-
-// calculating Bill after discount given to customers on order of any type of outdoor furniture
-    public int calculatingBillAfterDiscount(int discountPerentage){
-              if(Furnituretype.equals("Outdoor")) {
-
-                return furnitureprice = furnitureprice - (furnitureprice * discountPerentage / 100);
-              }
-        return furnitureprice ;
+    int furnitureCode;
+    String furnitureType;
+    int gradeOfFurniture;
+    String color;
+    String furnitureUsage;
+    double price;
+    public FurnitureItem(){
+        this.furnitureCode=319;
+        this.furnitureType="Table";
+        this.gradeOfFurniture=1;
+        this.color="Blue";
+        this.furnitureUsage="Outdoor";
+        this.price=5000;
     }
-    public static void main(String args[]){
+    public double calculatingdiscount(int percentage){
 
-        int discountPerentage=5;
-        int totalbill=500;
-        FurnitureItem furnitureItem =new FurnitureItem();
-        System.out.println(furnitureItem.calculatingBillAfterDiscount(discountPerentage));
+        return price=price-(price * percentage) / 100;
+
+    }
+    public void displaydetails(){
+        System.out.println("Furniture code "+furnitureCode);
+        System.out.println("Furnitre Type "+furnitureType);
+        System.out.println("Furnitre Grade "+gradeOfFurniture);
+        System.out.println("Furnitre color "+color);
+        System.out.println("Furnitre Usage "+furnitureUsage);
+        System.out.println("Furnitre price "+price);
+
 
     }
 }
